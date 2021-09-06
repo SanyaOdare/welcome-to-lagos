@@ -15,7 +15,6 @@ body {
   height: 100%;
   position: relative;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 100;
 }
 
 .toggle-btn {
@@ -88,12 +87,35 @@ body {
   font-size: 50px;
   text-transform: capitalize;
   stroke: 2px #fff;
-  text-shadow: 0 0 10px #fff;
+  /* text-shadow: 0 0 10px #fff; */
   z-index: 2;
-  color: #FFCD00;
+  color: #fff;
   pointer-events: none;
   transform: .5s;
 }
+
+.link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #000;
+  opacity: .4;
+  z-index: -1;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 97%;
+  height: 95%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #fff;
+} 
 
 .link.active {
   opacity: 1;
@@ -102,4 +124,30 @@ body {
 
 .home {
   background: url(img/img1.jpg);
+  background-size: cover;
+  grid-column: span 2;
 }
+
+.project {
+  background: url(img/img2.jpg);
+  background-size: cover;
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.service {
+  background: url(img/img3.jpg);
+  background-size: cover;
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.about {
+  background: url(img/img4.jpg);
+  background-size: cover;
+  }
+
+  .contact {
+    background: url(img/img5.jpg);
+    background-size: cover;    
+  }
